@@ -1,1 +1,0 @@
-/usr/bin/c++ -Wall -Wextra -Wpedantic -O3 -Os -rdynamic CMakeFiles/SOLE-solver.dir/src/main.cpp.o -o SOLE-solver 

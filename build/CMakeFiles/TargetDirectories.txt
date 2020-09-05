@@ -1,3 +1,0 @@
-/home/alex/SOLE_solver/build/CMakeFiles/rebuild_cache.dir
-/home/alex/SOLE_solver/build/CMakeFiles/edit_cache.dir
-/home/alex/SOLE_solver/build/CMakeFiles/SOLE-solver.dir
