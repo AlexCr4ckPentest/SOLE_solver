@@ -9,6 +9,8 @@
 
 namespace math::linear_algebra_system
 {
+    typedef long double ld;
+
     template<typename MatrixType, size_t Rows, size_t Columns,
         std::enable_if_t<
             std::is_integral<MatrixType>::value,
@@ -84,9 +86,9 @@ namespace math::linear_algebra_system
         compute_all(const matrix_3x3<MatrixType> matrix, const std::tuple<MatrixType, MatrixType, MatrixType>& b_values)
         {
             const auto delta {compute_delta(matrix)};
-            return std::make_tuple(compute_delta(matrix, DeltaType::X, b_values) / delta,
-                                    compute_delta(matrix, DeltaType::Y, b_values) / delta,
-                                    compute_delta(matrix, DeltaType::Z, b_values) / delta);
+            return std::make_tuple(compute_delta(matrix, DeltaType::X, b_values) / static_cast<ld>(delta),
+                                    compute_delta(matrix, DeltaType::Y, b_values) / static_cast<ld>(delta),
+                                    compute_delta(matrix, DeltaType::Z, b_values) / static_cast<ld>(delta));
         }
     } // namespace cramers_method
 } // namespace math::linear_algebra_system
