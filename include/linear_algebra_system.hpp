@@ -40,9 +40,8 @@ namespace math::linear_algebra_system
         > constexpr auto
         compute_delta(const matrix_3x3<MatrixType> matrix)
         {
-            if (!(matrix.size() >= 3 && matrix[0].size() >= 3)) {
+            if (!(matrix.size() >= 3 && matrix[0].size() >= 3))
                 throw std::runtime_error("Matrix must be 3x3!");
-            }
 
             return (
                 ((matrix[0][0] * matrix[1][1] * matrix[2][2]) +
@@ -64,9 +63,8 @@ namespace math::linear_algebra_system
         compute_delta(matrix_3x3<MatrixType> matrix, const DeltaType delta_type,
                         const std::tuple<MatrixType, MatrixType, MatrixType>& b_values)
         {
-            if (!(matrix.size() >= 3 && matrix[0].size() >= 3)) {
+            if (!(matrix.size() >= 3 && matrix[0].size() >= 3))
                 throw std::runtime_error("Matrix must be 3x3!");
-            }
 
             switch (delta_type) {
             case DeltaType::X: std::tie(matrix[0][0], matrix[1][0], matrix[2][0]) = b_values; break;
